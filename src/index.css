@@ -11,3 +11,164 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.outer-about {
+  margin:10em;
+  justify-content: center;
+}
+
+.outer-about p {
+  font-size: medium;
+}
+
+/* Common */
+.display-area-loader {
+  margin: auto;
+  stroke: #0880C6;
+  height: 80px;
+}
+/* End */
+
+
+/* Home.jsx */
+.loader {
+  margin: auto;
+  width: 100%;
+  stroke: #98ff98;
+  height: 100px;
+  margin-top: 10em;
+}
+/* End */
+
+/* challengeCard.jsx */
+
+h6{
+  color: #666;
+}
+
+h6::after {
+	position: absolute;
+    left: 50%;
+	content: '';
+	height: 40px;
+	height: 5px;
+    background:#0880C6;
+    transition: all 0.5s linear;
+    width: 0;
+    bottom: 0;  
+}
+
+h6:hover::after{
+  width: 155px;
+  margin-left: -78px;
+}
+
+.icon-btn{
+  background-color: #0880C6;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+  
+}
+.icon-btn::before, icon.btn::after {
+  content: '';
+	position: absolute;	
+	transition: inherit;
+	z-index: -1;
+}
+
+.icon-btn:hover  {
+  color: var(--def);
+	transition-delay: .5s;
+}
+
+.icon-btn:hover::before {
+  transition-delay: 0s;
+}
+
+.icon-btn:hover::after{
+  background: var(--inv);
+	transition-delay: .35s;
+}
+
+.icon-btn::before, .icon-btn:hover::after{
+  left:0;
+  height: 0;
+	width: 100%;
+}
+
+.BiCodeCurly-icon {
+  margin: auto;
+  width: 100%;
+}
+
+/* End */
+
+/* AccurateReversal.jsx */
+
+.input {
+  width: 70%;
+  background-color: #f2f2f2;
+  border:1px solid #ccc;
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
+}
+.input:focus {
+  background-color: #f2f2f2;
+  border:1px solid #ccc;
+}
+
+.input-and-btn {
+  display: flex;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 5px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.left {
+  border: solid 1px #0880C6;
+  width: 100%;
+}
+
+.right {
+  border: #98ff98 solid 1px;
+  width: 100%;
+}
+
+p {
+  color: rebeccapurple;
+}
+
+.above {
+  margin-top: 3em;
+  margin-bottom: 6em;
+  position: relative;
+}
+
+.display-area {
+  margin: auto;
+  position: relative;
+  width: 100%;
+  margin-top: 4em;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+/* End */
