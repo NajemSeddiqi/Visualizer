@@ -8,8 +8,8 @@ export function getChallenges() {
 }
 
 // Axios changes the returned data of ours type when it contains spaces and reversed numbers
-export function postAString(endpoint, string) {
-  return fetch(baseUrl + endpoint, getOptions('POST', string));
+export function postAString(endpoint, body) {
+  return fetch(baseUrl + endpoint, getOptions('POST', body));
 }
 
 function getOptions(method, body) {

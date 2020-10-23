@@ -25,7 +25,6 @@ class Home extends Component {
   }
 
   handleFocus = (id) => {
-    console.log(id);
     this.setState((prevState) => ({
       data: prevState.data.map((i) => (i.id === id ? { ...i, focus: true } : { ...i, focus: false })),
     }));

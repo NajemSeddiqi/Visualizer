@@ -23,11 +23,81 @@ code {
 }
 
 /* Common */
+
+.focus-input:focus {
+  background-color: #f2f2f2;
+  border:1px solid #ccc;
+}
+
+.background-input {
+  background-color: #f2f2f2;
+  border:1px solid #ccc;
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
+}
+
 .display-area-loader {
   margin: auto;
   stroke: #0880C6;
   height: 80px;
 }
+
+.display-area {
+  margin: auto;
+  position: relative;
+  width: 100%;
+  margin-top: 4em;
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.left {
+  border: solid 1px #0880C6;
+  width: 100%;
+  padding-left: 2px;
+}
+
+.right {
+  border: #98ff98 solid 1px;
+  width: 100%;
+  padding-left: 2px;
+}
+
+p {
+  color: rebeccapurple;
+}
+
+p + p {
+  margin-top: -10px;
+}
+
+.above {
+  margin-top: 3em;
+  margin-bottom: 6em;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 5px;
+}
+
 /* End */
 
 
@@ -105,70 +175,25 @@ h6:hover::after{
 
 /* AccurateReversal.jsx */
 
-.input {
+.reverse-string-input{
   width: 70%;
-  background-color: #f2f2f2;
-  border:1px solid #ccc;
-  -webkit-transition: width .35s ease-in-out;
-  transition: width .35s ease-in-out;
-}
-.input:focus {
-  background-color: #f2f2f2;
-  border:1px solid #ccc;
 }
 
-.input-and-btn {
+.input-and-btn-reversal {
   display: flex;
 }
 
-.form-group {
-  position: relative;
+/* End */
+
+
+/* Bookend */
+.string-sequence-bookend {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  padding: 5px;
 }
 
-.main {
+.input-and-btn-bookend {
   display: flex;
-  justify-content: space-evenly;
 }
 
-.left {
-  border: solid 1px #0880C6;
-  width: 100%;
-}
-
-.right {
-  border: #98ff98 solid 1px;
-  width: 100%;
-}
-
-p {
-  color: rebeccapurple;
-}
-
-.above {
-  margin-top: 3em;
-  margin-bottom: 6em;
-  position: relative;
-}
-
-.display-area {
-  margin: auto;
-  position: relative;
-  width: 100%;
-  margin-top: 4em;
-}
-
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
-}
 
 /* End */

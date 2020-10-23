@@ -14,8 +14,6 @@ import ValidateCard from './../components/challenges/validateCard';
 
 export function getAll() {
   return [
-    <PalindromeDescendant key={6} />,
-    <PopOff key={7} />,
     <SumDigProd key={8} />,
     <ReverseOddOnes key={0} />,
     <HasSamePattern key={1} />,
@@ -23,8 +21,10 @@ export function getAll() {
     <Truncatable key={3} />,
     <ValidateCard key={4} />,
     <SameVowelGroup key={5} />,
+    <PalindromeDescendant key={6} />,
+    <PopOff key={7} />,
+    <AccurateReversal key={9} />,
     <Bookend key={10} />,
     <OddOne key={11} />,
-    <AccurateReversal key={9} />,
   ];
 }

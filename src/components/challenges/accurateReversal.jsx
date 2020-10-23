@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { postAString } from '../../services/challengeService';
 import * as SVGLoaders from 'svg-loaders-react';
+import Instructions from '../instructions';
 
 const AccurateReversal = () => {
+  const data = ['The UPPERCASE/lowercase positions will be kept in the same order as the original string.', 'Spaces will be kept in the same order as well.'];
+  const examples = ['UPPER lower ➞ "REWOL reppu"', '1 23 456 ➞ "6 54 321"', 'I WondeR If ThIs iS UseFuL? ➞ "? LufesU Si SiHt fI RedNoWi"'];
   const { register, handleSubmit, errors, formState } = useForm({ mode: 'onChange' });
   const [value, setValue] = useState();
   const [input, setInput] = useState();
@@ -43,10 +46,18 @@ const AccurateReversal = () => {
         <div className="left">
           <form className="form-group" onSubmit={handleSubmit(submit)}>
             <div className="label">
-              <label htmlFor="input">{errors.input ? <span className="text-danger pt-1">This field is required</span> : 'The string you want reversed'}</label>
+              <label htmlFor="input">
+                {errors.input ? <span className="text-danger pt-1">This field is required to have atleast 4 characters</span> : 'The string you want reversed'}
+              </label>
             </div>
-            <div className="input-and-btn">
-              <input className="input" type="text" name="input" aria-invalid={errors.input ? true : false} ref={register({ required: true })} />
+            <div className="input-and-btn-reversal">
+              <input
+                className="reverse-string-input background-input focus-input"
+                type="text"
+                name="input"
+                aria-invalid={errors.input ? true : false}
+                ref={register({ required: true, minLength: 4 })}
+              />
               <button className="btn btn-success" type="submit" disabled={!formState.isValid ? true : false}>
                 Reverse
               </button>
@@ -54,19 +65,7 @@ const AccurateReversal = () => {
           </form>
         </div>
         <div className="right">
-          <p>
-            * The UPPERCASE/lowercase positions will be kept in the same order as the original string.
-            <br />* Spaces will be kept in the same order as well.
-            <br />
-            <br />
-            <b> Examples</b>
-            <br />
-            "UPPER lower" ➞ "REWOL reppu"
-            <br />
-            "1 23 456" ➞ "6 54 321"
-            <br />
-            "I WondeR If ThIs iS UseFuL?" ➞ "? LufesU Si SiHt fI RedNoWi"
-          </p>
+          <Instructions data={data} examples={examples} />
         </div>
       </div>
       <div className="above">
